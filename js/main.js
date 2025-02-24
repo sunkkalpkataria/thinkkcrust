@@ -93,6 +93,15 @@
     });
 
 
+  function changeTab(tabId) {
+    $('.tab-pane').removeClass('show active'); // Hide all tabs
+    $('#' + tabId).addClass('show active'); // Show the selected tab
+
+    $('.nav-link').removeClass('active'); // Remove active class from all tabs (if using nav-pills)
+    $('[href="#' + tabId + '"]').addClass('active'); // Activate the correct tab link
+  }
+
+
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,

@@ -126,6 +126,40 @@
       </div>
       <!-- Navbar & Hero End -->
 
+      <div class="col-md-6">
+        <div class="form-floating">
+          <select class="form-select" id="menuCategory" onchange="changeTab(this.value)">
+            <option value="tab-tea" selected>Select a category</option>
+            <option value="tab-tea">Tea</option>
+            <option value="tab-coffee">Hot Coffee</option>
+            <option value="tab-burgers">Burgers</option>
+            <option value="tab-pizza">Pizza</option>
+          </select>
+          <label for="menuCategory">Choose a Menu</label>
+        </div>
+      </div>
+      
+      <!-- Bootstrap Tabs -->
+      <div class="tab-content mt-3">
+        <div class="tab-pane fade show active" id="tab-tea">
+          <h5>Tea Menu</h5>
+          <p>All tea varieties listed here.</p>
+        </div>
+        <div class="tab-pane fade" id="tab-coffee">
+          <h5>Hot Coffee Menu</h5>
+          <p>Delicious coffee options here.</p>
+        </div>
+        <div class="tab-pane fade" id="tab-burgers">
+          <h5>Burgers Menu</h5>
+          <p>Explore our tasty burgers.</p>
+        </div>
+        <div class="tab-pane fade" id="tab-pizza">
+          <h5>Pizza Menu</h5>
+          <p>All our pizza varieties listed.</p>
+        </div>
+      </div>
+      
+
       <!-- Menu Start -->
       <div class="container-fluid py-5">
         <div class="container-fluid">
