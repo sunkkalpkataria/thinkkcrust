@@ -62,18 +62,39 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-KZX95QXJSK"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Thinkk Crust Café",
+        "url": "https://www.thinkkcrust.in/testimonials.html",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "41"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Sakshi" },
+            "reviewBody": "Absolutely love Thinkk Crust Café! Their thin-crust pizza is delicious, and the coffee is top-notch. Highly recommended!",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Rahul Mehta" },
+            "reviewBody": "Great ambiance and amazing food. The pasta was perfectly cooked, and their mocktails are refreshing.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "4.5", "bestRating": "5" }
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Neha Sharma" },
+            "reviewBody": "Best café in Jaipur! Love their open toast and shakes. A must-visit for food lovers.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+          }
+        ]
       }
-      gtag("js", new Date());
-      gtag("config", "G-KZX95QXJSK");
-    </script>
+      </script>
   </head>
 
   <body>
@@ -130,7 +151,7 @@
                   >
                 </div>
               </div>
-              <a href="testimonial.html" class="nav-item nav-link active"
+              <a href="testimonials.html" class="nav-item nav-link active"
                 >Testimonials</a
               >
               <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -498,7 +519,7 @@
               <div class="d-flex pt-2">
                 <a
                   class="btn btn-outline-light btn-social"
-                  href="https://www.instagram.com/thinkk_crust/"
+                  href="https://www.instagram.com/thinkkcrust/"
                   ><i class="fab fa-instagram"></i
                 ></a>
                 <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>

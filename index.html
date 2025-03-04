@@ -65,13 +65,76 @@
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-KZX95QXJSK"
     ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Thinkk Crust Café",
+        "image": "https://www.thinkkcrust.in/img/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "223, Dhruv Marg, Gurunanakpura, Raja Park",
+          "addressLocality": "Jaipur",
+          "addressRegion": "Rajasthan",
+          "postalCode": "302020",
+          "addressCountry": "India"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "26.896499402349104",
+          "longitude": "75.82359035450575"
+        },
+        "telephone": "+91-8005620413",
+        "url": "https://www.thinkkcrust.in",
+        "priceRange": "$$",
+        "openingHours": "Mo-Su 13:00-23:00",
+        "servesCuisine": "Italian, Chinese, Fast Food, Café, Beverages",
+        "menu": [
+          "https://www.thinkkcrust.in/food-menu.html",
+          "https://www.thinkkcrust.in/beverage-menu.html"
+        ],
+        "sameAs": [
+          "https://www.instagram.com/thinkkcrust",
+          "https://www.facebook.com/thinkkcrust"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "41"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Sakshi" },
+            "reviewBody": "Absolutely love Thinkk Crust Café! Their thin-crust pizza is delicious, and the coffee is top-notch. Highly recommended!",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Rahul Mehta" },
+            "reviewBody": "Great ambiance and amazing food. The pasta was perfectly cooked, and their mocktails are refreshing.",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "4.5",
+              "bestRating": "5"
+            }
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Neha Sharma" },
+            "reviewBody": "Best café in Jaipur! Love their open toast and shakes. A must-visit for food lovers.",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          }
+        ]
       }
-      gtag("js", new Date());
-      gtag("config", "G-KZX95QXJSK");
     </script>
   </head>
 
@@ -128,7 +191,7 @@
                   >
                 </div>
               </div>
-              <a href="testimonial.html" class="nav-item nav-link"
+              <a href="testimonials.html" class="nav-item nav-link"
                 >Testimonials</a
               >
               <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -1220,7 +1283,7 @@
               </div>
             </div>
           </div>
-          <a class="btn btn-primary py-3 px-5 mt-2" href="testimonial.html"
+          <a class="btn btn-primary py-3 px-5 mt-2" href="testimonials.html"
             >Show More</a
           >
         </div>
@@ -1263,7 +1326,7 @@
               <div class="d-flex pt-2">
                 <a
                   class="btn btn-outline-light btn-social"
-                  href="https://www.instagram.com/thinkk_crust/"
+                  href="https://www.instagram.com/thinkkcrust/"
                   ><i class="fab fa-instagram"></i
                 ></a>
                 <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>

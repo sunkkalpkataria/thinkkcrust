@@ -62,18 +62,29 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-KZX95QXJSK"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Thinkk Crust Café",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "223, Dhruv Marg, Gurunanakpura, Raja Park",
+          "addressLocality": "Jaipur",
+          "addressRegion": "Rajasthan",
+          "postalCode": "302020",
+          "addressCountry": "India"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "26.896499402349104",
+          "longitude": "75.82359035450575"
+        },
+        "telephone": "+91-8005620413",
+        "url": "https://www.thinkkcrust.in/contact.html"
       }
-      gtag("js", new Date());
-      gtag("config", "G-KZX95QXJSK");
-    </script>
+      </script>
+      
   </head>
 
   <body>
@@ -130,7 +141,7 @@
                   >
                 </div>
               </div>
-              <a href="testimonial.html" class="nav-item nav-link"
+              <a href="testimonials.html" class="nav-item nav-link"
                 >Testimonials</a
               >
               <a href="contact.html" class="nav-item nav-link active"
@@ -310,7 +321,7 @@
               <div class="d-flex pt-2">
                 <a
                   class="btn btn-outline-light btn-social"
-                  href="https://www.instagram.com/thinkk_crust/"
+                  href="https://www.instagram.com/thinkkcrust/"
                   ><i class="fab fa-instagram"></i
                 ></a>
                 <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
