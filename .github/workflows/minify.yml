@@ -1,0 +1,54 @@
+name: Minify Assets
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  minify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install minifiers
+        run: npm install -g clean-css-cli uglify-js html-minifier-terser
+
+      - name: Minify CSS
+        run: |
+          mkdir -p minified
+          for file in $(find . -name "*.css" -not -path "./node_modules/*"); do
+            cleancss -o "minified/$(basename $file)" "$file"
+          done
+
+      - name: Minify JavaScript
+        run: |
+          for file in $(find . -name "*.js" -not -path "./node_modules/*"); do
+            uglifyjs "$file" -o "minified/$(basename $file)" --compress --mangle
+          done
+
+      - name: Minify HTML
+        run: |
+          for file in $(find . -name "*.html" -not -path "./node_modules/*"); do
+            html-minifier-terser --collapse-whitespace --remove-comments --minify-js true --minify-css true -o "minified/$(basename $file)" "$file"
+          done
+
+      - name: Commit and Push Minified Files
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          mv minified/* .
+          rm -rf minified
+          git add .
+          git commit -m "Auto-minified CSS, JS, and HTML" || echo "No changes to commit"
+          git push
