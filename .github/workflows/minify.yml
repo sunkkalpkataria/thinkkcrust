@@ -8,6 +8,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   minify:
     runs-on: ubuntu-latest
@@ -44,6 +47,8 @@ jobs:
           done
 
       - name: Commit and Push Minified Files
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -51,4 +56,4 @@ jobs:
           rm -rf minified
           git add .
           git commit -m "Auto-minified CSS, JS, and HTML" || echo "No changes to commit"
-          git push
+          git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git" HEAD:${{ github.ref_name }}
